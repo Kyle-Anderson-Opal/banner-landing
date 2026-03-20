@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Strategies — AI-Powered Customer Systems for Durango Contractors</title>
+  <meta name="description" content="Banner Strategies builds AI-powered customer intake, automated quoting, and 24/7 lead capture for trade contractors in Durango, CO.">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --fg: #e8e6e1;
+      --accent: #c9a227;
+      --muted: #7a7770;
+      --card-bg: #161616;
+      --border: #2a2a2a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: opacity 0.2s;
+    }
+    .hero-cta:hover { opacity: 0.85; }
+
+    /* PROBLEM */
+    .problem {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .problem h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .problem ul {
+      list-style: none;
+      padding: 0;
+    }
+    .problem li {
+      padding: 0.8rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .problem li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* SERVICES */
+    .services {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .services h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+    .services .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .service-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+    }
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    .service-card .tag {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--fg);
+      opacity: 0.5;
+    }
+
+    /* NUMBERS */
+    .numbers {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .numbers h2 {
+      font-size: 1.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .stat h3 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .stat p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    /* CTA */
+    .cta-section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cta-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 1rem 2.2rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+    }
+    .cta-primary:hover { opacity: 0.85; }
+    .cta-secondary {
+      display: inline-block;
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 1rem 2.2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    .cta-secondary:hover { border-color: var(--accent); }
+
+    /* FOOTER */
+    footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1.5rem 3rem; }
+      nav { padding: 1.2rem 1.5rem; }
+      .service-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Banner Strategies</div>
+    <a href="tel:+19707597625" class="nav-cta">Call (970) 759-7625</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Your customers call at 9 PM.<br><span>Who's answering?</span></h1>
+    <p>Banner Strategies builds AI-powered customer systems for trade contractors in Durango. Automated intake, instant quoting, 24/7 lead capture. You do the work. The system does the rest.</p>
+    <a href="tel:+19707597625" class="hero-cta">Schedule a 10-Minute Audit</a>
+  </section>
+
+  <section class="problem">
+    <h2>The calls you're missing</h2>
+    <ul>
+      <li>62% of customers call after business hours. If nobody picks up, they call the next guy.</li>
+      <li>Your website says "Call for a quote." Your competitor's site gives an estimate in 30 seconds.</li>
+      <li>You're running a 24/7 business on a 9-to-5 system.</li>
+      <li>Every missed call is $500-$5,000 walking to someone else.</li>
+    </ul>
+  </section>
+
+  <section class="services">
+    <h2>What we build</h2>
+    <p class="subtitle">Complete customer systems, not just websites.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>AI Receptionist</h3>
+        <p>Answers calls and chats 24/7 with your voice, your pricing, your service area. Books appointments directly to your calendar. Customers think they're talking to your office.</p>
+        <span class="tag">Core System</span>
+      </div>
+      <div class="service-card">
+        <h3>Automated Quoting</h3>
+        <p>Customers describe the job online. The system generates a ballpark estimate using your rates and sends it instantly. You wake up to qualified leads, not voicemails.</p>
+        <span class="tag">Lead Conversion</span>
+      </div>
+      <div class="service-card">
+        <h3>Follow-Up Engine</h3>
+        <p>Automated text and email sequences that keep leads warm. No more "I forgot to call them back." The system follows up until they book or say no.</p>
+        <span class="tag">Revenue Recovery</span>
+      </div>
+      <div class="service-card">
+        <h3>Contractor Website</h3>
+        <p>Fast, mobile-first site built around your real work. Project galleries, click-to-call, online booking. Designed to convert searchers into callers in under 60 seconds.</p>
+        <span class="tag">Foundation</span>
+      </div>
+      <div class="service-card">
+        <h3>Google Ads Management</h3>
+        <p>Targeted ads for "[your trade] Durango" searches. We manage the budget, write the ads, and track every lead back to every dollar spent.</p>
+        <span class="tag">Growth</span>
+      </div>
+      <div class="service-card">
+        <h3>24/7 Lead Capture</h3>
+        <p>Every form fill, every call, every chat — captured, logged, and routed. Nothing falls through the cracks. Full dashboard so you see exactly where your jobs are coming from.</p>
+        <span class="tag">Visibility</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers">
+    <h2>The math on missed leads</h2>
+    <div class="stat-grid">
+      <div class="stat">
+        <h3>62%</h3>
+        <p>of service calls happen outside business hours</p>
+      </div>
+      <div class="stat">
+        <h3>78%</h3>
+        <p>of customers hire whoever responds first</p>
+      </div>
+      <div class="stat">
+        <h3>$2,400</h3>
+        <p>average job value for Durango trade contractors</p>
+      </div>
+      <div class="stat">
+        <h3>5-10</h3>
+        <p>leads per month lost to slow response time</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>10 minutes. No pitch.</h2>
+    <p>I'll pull up your Google presence, show you exactly what customers see when they search for your trade in Durango, and tell you what's costing you jobs. If there's nothing to fix, I'll say so.</p>
+    <div class="cta-row">
+      <a href="tel:+19707597625" class="cta-primary">Call (970) 759-7625</a>
+      <a href="mailto:kyle@bannerstrategies.com" class="cta-secondary">Email Kyle</a>
+    </div>
+  </section>
+
+  <footer>
+    Banner Strategies &middot; Durango, CO &middot; kyle@bannerstrategies.com
+  </footer>
+
+</body>
+</html>
